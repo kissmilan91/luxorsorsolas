@@ -1,4 +1,5 @@
 import random
+import datetime
 from typing import Set, List
 
 
@@ -63,6 +64,23 @@ def main() -> None:
         if szam in r:
             r_rendezve.append(szam)
     print(f'Az "R" Számok növekvő sorrendben: {r_rendezve}')
+    # print(f'\n Az összes szám: {l_rendezve}{u_rendezve}{x_rendezve}{o_rendezve}{r_rendezve}')
+
+    teljes_szamsor = l_rendezve + u_rendezve + x_rendezve + o_rendezve + r_rendezve
+
+    # teljes_szamsor = []
+    # teljes_szamsor.append(l_rendezve + u_rendezve + x_rendezve + o_rendezve + r_rendezve)
+
+    print(teljes_szamsor)
+
+    with open('szamok.txt', 'a', encoding='utf-8') as szamsor:
+        szoveg = 'Luxor sorsolás eredménye: '
+        soremeles = '\n'
+        ido = datetime.datetime.now()
+        szamsor.write(szoveg)
+        szamsor.write((ido.strftime("%Y %B %d %X ")))
+        szamsor.writelines(str(teljes_szamsor))
+        szamsor.write(soremeles)
 
 
 if __name__ == "__main__":
