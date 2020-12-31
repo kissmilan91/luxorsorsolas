@@ -20,6 +20,7 @@ def main() -> None:
 
     if bekeres == jelszo:
         print('A program lefut :) ')
+        print('\n')
 
         #  Luxor számoszlopok L 1-15
         l: Set[int] = set()
@@ -81,12 +82,11 @@ def main() -> None:
                 r_rendezve.append(szam)
         print(f'Az "R" Számok növekvő sorrendben: {r_rendezve}')
         # print(f'\n Az összes szám: {l_rendezve}{u_rendezve}{x_rendezve}{o_rendezve}{r_rendezve}')
-
+        print('\n')
         teljes_szamsor = l_rendezve + u_rendezve + x_rendezve + o_rendezve + r_rendezve
 
         # teljes_szamsor = []
         # teljes_szamsor.append(l_rendezve + u_rendezve + x_rendezve + o_rendezve + r_rendezve)
-
         print(f'A kihúzott számok: {teljes_szamsor}')
 
         with open('szamok.txt', 'a', encoding='utf-8') as szamsor:
@@ -110,7 +110,7 @@ def main() -> None:
 
         print(f'A kihúzott páros számok: {paros_szamok}')
         print(f'A kihúzott páratlan számok: {paratlan_szamok}')
-
+        print('\n')
         #  legnagyobb páratlan szám értékét és indexét a listában
         legnagyobb_paratlan: int = -1
         for i, item in enumerate(teljes_szamsor):
