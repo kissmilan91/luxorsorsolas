@@ -104,9 +104,11 @@ def main() -> None:
         for i in szamok:
             if i % 2 == 0:
                 paros_szamok.append(i)
-        for j in szamok:
-            if j % 2 == 1:
-                paratlan_szamok.append(j)
+            else:
+                paratlan_szamok.append(i)
+        # for j in szamok:
+            # if j % 2 == 1:
+                # paratlan_szamok.append(j)
 
         print(f'A kihúzott páros számok: {paros_szamok}')
         print(f'A kihúzott páratlan számok: {paratlan_szamok}')

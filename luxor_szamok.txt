@@ -1,0 +1,5 @@
+L számok: 1 5 10 8
+U számok: 16 20 22 28
+X számok: 32 36 40 42
+O számok: 46 48 56 60
+R számok: 66 62 64 68
