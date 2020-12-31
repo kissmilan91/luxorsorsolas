@@ -125,6 +125,33 @@ def main() -> None:
         else:
             print(f'A legnagyobb páratlan szám értéke: {szamok[legnagyobb_paratlan]}, indexe: {legnagyobb_paratlan}')
 
+        legnagyobb_paros: int = -1
+        for i, item in enumerate(teljes_szamsor):
+            if item % 2 == 0:   # Ha páros
+                if legnagyobb_paros == -1:   # Az első páros szám a listában
+                    legnagyobb_paros = i   # Erre tekintünk a legnagyobb páros számként
+                else:
+                    if item > szamok[legnagyobb_paros]:
+                        legnagyobb_paros = i
+        if legnagyobb_paros == -1:
+            print('Nincs a listában páros szám')
+        else:
+            print(f'A legnagyobb páros szám értéke: {szamok[legnagyobb_paros]}, indexe: {legnagyobb_paros}')
+
+        print('\n')
+        db_paros: int = 0
+        for e in teljes_szamsor:
+            if e % 2 == 0:
+                db_paros += 1
+        print(f'Páros számok mennyisége: {db_paros} db')
+
+        db_paratlan: int = 0
+        for e in teljes_szamsor:
+            if e % 2 == 1:
+                db_paratlan += 1
+        print(f'Páratlan számok mennyisége: {db_paratlan} db')
+        print('\n')
+
 
 if __name__ == "__main__":
     main()
